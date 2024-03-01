@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail Gallery</title>
+</head>
+<body> 
+    <img id="mainImage" style="border :2px solid grey" src="img1.jpg" height="500px" width="540px"  alt=" None"> 
+    <br>
+    <div id="divId" onclick="chageImageOnclick()"  onmouseover="f1()" onmouseout ="f2()"> 
+        <img id="2" class="imgStyle" src="img1.jpg"  alt="">
+        <img id="3" class="imgStyle" src="img2.jpg" alt="" >
+        <img id="4" class="imgStyle" src="img3.jpg"   alt="">
+        <img id="5" class="imgStyle" src="ilia-bronskiy-XJKL3O1i6TQ-unsplash.jpg"  alt="" >
+       
+       
+
+
+    </div>
+    <script type="text/javascipt">
+        function changeImageOnclick(){
+            var x = event.target;
+            if(x.tagName=="IMG"){
+                a = x.getAttribute("src");
+                document.getElementById("mainImage").setAttributes("src,a");
+            }
+            
+
+        }
+        function f1(){
+            x = event.target;
+            x.style.cursor ='pointer';
+            x.style.borderColor = 'red';
+        }
+        function f2(){
+            x = event.target;
+            x.style.borderColor= "grey";
+        }
+
+    </script>
+    
+</body>
+</html>
